@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #bdc3c7;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 10px 30px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+.contenedorHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    margin: 20px;
+}
+
+article .contenedorImg img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf0f1;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+article.i-iqz {
+    flex-direction: row;
+}
+
+article.i-der {
+    flex-direction: row-reverse;
+}
+
+.contenedorTexto {
+    margin: 0 10px;
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* trabajando con el menu */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+li:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.izquierda {
+    display: flex;
+    align-items: center;
+}
+
+.izquierda img {
+    width: 100px;
+}
+
+nav a {
+    color: #ecf0f1;
+    font-weight: bold;
+    background-color: #27ae60;
+    padding: 5px;
+}
+
+/* formulario */
+input, textarea {
+    border: none;
+    outline: none;
+    font-size: 12pt;
+    padding: 5px;
+    width: 90%;
+    min-width: 90%;
+    max-width: 90%;   
+}
+
+.contenedorCotizacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formulario {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border-radius: 20px 0 0 20px;
+    padding: 10px;
+}
+
+.imagenFondo {
+    background-image: url(imagenes/cotizacion.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0 20px 20px 0;
+}
+
+.boton {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    font-size: 12pt;
+    border: none;
+    outline: none;
+    background-color: #27ae60;
+    color: #ecf0f1;
+    font-weight: bold;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+button.limpiar {
+    background-color: #c0392b;
+}
+
+footer {
+    text-align: center;
+    background-color: #2c3e50;
+    padding: 10px;
+    color: #ecf0f1;
+}
+
+.corazon {
+    color: #c0392b;
+}
+
+@media (max-width: 768px) {
+    .contenedorHeader {
+        flex-direction: column;
+    }
+    .servicios {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .contenedorCotizacion {
+        grid-template-columns: 1fr;
+    }
+    .formulario {
+        display: flex;
+        border-radius: 20px;
+        justify-content: center;
+    }
+    .imagenFondo {
+        display: none;
+    }
+}
